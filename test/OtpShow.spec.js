@@ -33,7 +33,7 @@ describe('OtpShow.js', () => {
     })
 
 
-    it('should valid: create a six digits OTP', function() {
+    it('should be valid: create a six digits OTP', function() {
 
         const ticketGateOpeningTime = 3
         const duration = 5
@@ -89,7 +89,7 @@ describe('OtpShow.js', () => {
     })
 
 
-    it('should invalid: try create a six digits OTP one hour before ticket gate opening time', function() {
+    it('should be invalid: try create a six digits OTP one hour before ticket gate opening time', function() {
 
         const ticketGateOpeningTime = 3
         const duration = 5
@@ -146,7 +146,7 @@ describe('OtpShow.js', () => {
     })
     
 
-    it('should valid: validate a six digits OTP', function() {
+    it('should be valid: validate a six digits OTP', function() {
 
         const ticketGateOpeningTime = 3
         const duration = 5
@@ -203,7 +203,7 @@ describe('OtpShow.js', () => {
     })    
 
 
-    it('should valid: validate a six digits OTP after one hour of show time', function() {
+    it('should be valid: validate a six digits OTP after one hour of show time', function() {
 
         const ticketGateOpeningTime = 3
         const duration = 5
@@ -259,7 +259,7 @@ describe('OtpShow.js', () => {
     })    
 
 
-    it('should invalid: validate a six digits OTP next day', function() {
+    it('should be invalid: validate a six digits OTP next day', function() {
 
         const ticketGateOpeningTime = 3
         const duration = 5
