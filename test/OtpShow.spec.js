@@ -93,7 +93,14 @@ describe('OtpShow.js', () => {
 
         const ticketGateOpeningTime = 3
         const duration = 5
+
+        const month = 7
+        const year = 2019
+        const day = 14
         const hours = 15
+
+        const date = `${year}-${month}-${day}`
+        const time = `${hours}:00`
 
         const showOtp = undefined
 
@@ -101,8 +108,8 @@ describe('OtpShow.js', () => {
             id: 1,
             uf: "DF",
             cityId: 530010,
-            date: "2019-07-14",
-            time: `${hours}:00`
+            date: date,
+            time: time
         }
 
         const getHours = Date.prototype.getHours
@@ -115,15 +122,15 @@ describe('OtpShow.js', () => {
         }
 
         Date.prototype.getFullYear = () => {
-            return 2019
+            return year
         }
 
         Date.prototype.getMonth = () => {
-            return 6
+            return month - 1
         }
 
         Date.prototype.getDate = () => {
-            return 14
+            return day
         }
 
         const otpShow = new OtpShow(ticketGateOpeningTime, duration)
@@ -309,7 +316,7 @@ describe('OtpShow.js', () => {
     })   
     
 
-    it('should invalid: create and validate a six digits OTP after show ending', function() {
+    it('should be invalid: create and validate a six digits OTP after show ending', function() {
 
         const currentDate = new Date()
 
