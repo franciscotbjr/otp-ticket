@@ -1,0 +1,37 @@
+{
+  "name": "@franciscotbjr/ticket-otp",
+  "version": "0.0.1",
+  "description": "Geração de validação de Token OTP para geração de QRCode de ingressos",
+  "main": "main.js",
+  "workspaces": [
+    "@franciscotbjr/*"
+  ],
+  "engines": {
+    "node": ">=10.15.3",
+    "npm": ">=6.10.0"
+  },
+  "scripts": {
+    "release": "npm publish --access=public",
+    "test": "mocha ./test/**/*.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "Francisco Tarcizo Bomfim Júnior",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "md5": "^2.2.1",
+    "otplib": "^11.0.1"
+  },
+  "devDependencies": {
+    "mocha": "^6.1.4"
+  },
+  "directories": {
+    "src": "src"
+  }
+}
