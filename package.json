@@ -24,7 +24,6 @@
   "author": "Francisco Tarcizo Bomfim Júnior",
   "license": "Apache-2.0",
   "dependencies": {
-    "crypto": "^1.0.1",
     "md5": "^2.2.1",
     "otplib": "^11.0.1"
   },
