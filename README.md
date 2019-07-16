@@ -8,6 +8,11 @@ Generate an OTP that will be a ticket for a show
         "md5": "^2.2.1",
         "otplib": "^11.0.1"
     }
+    
+1) https://www.npmjs.com/package/otplib
+
+2) https://www.npmjs.com/package/md5
+
 
 
 ## Dev Dependencies
