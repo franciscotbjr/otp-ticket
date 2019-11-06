@@ -1,6 +1,7 @@
 'use strict'
 
 const md5 = require('md5')
+const moment = require('moment')
 
 const ONE_SECOND = 1000
 const ONE_MINUTE = ONE_SECOND * 60
@@ -13,15 +14,10 @@ class OtpShowHelper {
 
     }
         
-    validateStartTime(show, ticketGateOpeningTime) {
-        const currentDate = new Date()
-        const dateFields = show.date.split('-')
-        const timeFields = show.time.split(':')
+    validateStartTime(show) {
+        const currentDate = moment();
     
-        return parseInt(dateFields[0]) === currentDate.getFullYear()
-            && parseInt(dateFields[1]) === currentDate.getMonth() + 1
-            && parseInt(dateFields[2]) === currentDate.getDate()
-            && currentDate.getHours() + ticketGateOpeningTime >= parseInt(timeFields[0])
+        return currentDate.isBetween(show.openGatesDates, show.endDate);
     }
 
     createSecret(show, sufix) {
